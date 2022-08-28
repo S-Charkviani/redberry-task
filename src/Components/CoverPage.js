@@ -17,7 +17,7 @@ const CoverPage = () => {
         <p>ჩანაწერის დამატება</p>
       </button>
       <button className={classes.button2}>
-        <p >ჩანაწერების სია </p>
+        <p>ჩანაწერების სია </p>
       </button>
     </div>
   );

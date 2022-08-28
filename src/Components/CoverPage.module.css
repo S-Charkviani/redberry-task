@@ -1,12 +1,10 @@
-.mainPage{
+.mainPage {
   position: relative;
-width: 1920px;
-height: 1080px;
+  width: 1920px;
+  height: 1080px;
 
-background: #FFFFFF;
+  background: #ffffff;
 }
-
- 
 
 .button1 {
   display: flex;
@@ -15,109 +13,106 @@ background: #FFFFFF;
   align-items: center;
   padding: 18px 60px;
   gap: 20px;
-  
+
   position: absolute;
   width: 387px;
   height: 60px;
-  left: calc(50% - 387px/2 - 0.5px);
+  left: calc(50% - 387px / 2 - 0.5px);
   top: 787px;
-  
-  background: #62A1EB;
+
+  background: #62a1eb;
   border-radius: 8px;
 }
 
-.button1 p{
+.button1 p {
   width: 223px;
   height: 24px;
-  
-  font-family: 'Helvetica Neue';
+
+  font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  
-  color: #FFFFFF;
-  
-  
+
+  color: #ffffff;
+
   /* Inside auto layout */
-  
+
   flex: none;
   order: 0;
   flex-grow: 0;
 }
 
-
-.button2{
+.button2 {
   display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 18px 60px;
-gap: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  gap: 20px;
 
-position: absolute;
-width: 387px;
-height: 60px;
-left: calc(50% - 387px/2 - 0.5px);
-top: 873px;
-
-background: #62A1EB;
-border-radius: 8px;
-}
-
-.button2 p{
-  width: 178px;
-height: 24px;
-
-font-family: 'Helvetica Neue';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
-
-color: #FFFFFF;
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
-}
-
-.frame{
   position: absolute;
-width: 781px;
-height: 482px;
-left: 589px;
-top: 182px;
+  width: 387px;
+  height: 60px;
+  left: calc(50% - 387px / 2 - 0.5px);
+  top: 873px;
+
+  background: #62a1eb;
+  border-radius: 8px;
 }
 
-.cover{
+.button2 p {
+  width: 178px;
+  height: 24px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.frame {
+  position: absolute;
+  width: 781px;
+  height: 482px;
+  left: 589px;
+  top: 182px;
+}
+
+.cover {
   position: absolute;
   left: 0%;
   right: 0%;
   top: 0%;
   bottom: 0%;
-background-image: url('LandingVisual/Images/Layer1.png')
+  background-image: url("LandingVisual/Images/Layer1.png");
 }
 
-.logo01{
+.logo01 {
   position: absolute;
-left: 58.51%;
-right: 35.21%;
-top: 78.22%;
-bottom: 11.62%;
+  left: 58.51%;
+  right: 35.21%;
+  top: 78.22%;
+  bottom: 11.62%;
 
-background: url('LandingVisual/Images/LOGO-10\ 1.png');
-
+  background: url("./Images/LOGO-10\ 1.png");
 }
 
-.logo02{
+.logo02 {
   position: absolute;
-width: 112px;
-height: 18px;
-left: calc(50% - 112px/2);
-top: 79px;
+  width: 112px;
+  height: 18px;
+  left: calc(50% - 112px / 2);
+  top: 79px;
 
-background-image: url('LandingVisual/Images/LOGO-02.png');
+  background-image: url("./Images/LOGO-02.png");
 }
