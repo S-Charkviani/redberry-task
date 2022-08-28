@@ -6,50 +6,6 @@
   background: #f7f7f7;
 }
 
-.title h1 {
-  position: absolute;
-  width: 223px;
-  height: 24px;
-  left: 671px;
-  top: 91px;
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-
-  /* შავი/700 */
-
-  color: #232323;
-}
-.line {
-  position: absolute;
-  width: 185px;
-  height: 0px;
-  left: 690px;
-  top: 130px;
-
-  border: 2px solid #000000;
-}
-.title h2 {
-  position: absolute;
-  width: 289px;
-  height: 24px;
-  right: 671px;
-  top: 91px;
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-
-  /* შავი/700 */
-
-  color: #232323;
-}
-
 .form {
   position: absolute;
   height: 973px;
@@ -255,24 +211,43 @@
 }
 
 .inputTeam option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  
+  position: absolute;
+  width: 878px;
+  height: 205px;
+  left: 174px;
+  top: 326px;
+  
+  filter: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+}
+
+
+/* needs check */
+.inputTeam option.selected{
   position: absolute;
   height: 21px;
   left: 16px;
   right: 83px;
-  top: calc(50% - 21px / 2 - 0.5px);
-
-  font-family: "Helvetica Neue";
+  top: calc(50% - 21px/2 - 0.5px);
+  font-family: 'Helvetica Neue';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   /* identical to box height, or 117% */
-
+  
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-
+  
   color: #000000;
+  
+
 }
 
 .inputPosition {
@@ -303,26 +278,43 @@
   flex-grow: 0;
 }
 
-.inputPosition option {
+/* need check */
+.inputPosition select.selected{  
   position: absolute;
   height: 21px;
   left: 16px;
   right: 83px;
-  top: calc(50% - 21px / 2 - 0.5px);
-
-  font-family: "Helvetica Neue";
+  top: calc(50% - 21px/2 - 0.5px);
+  font-family: 'Helvetica Neue';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   /* identical to box height, or 117% */
-
+  
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-
+  
   color: #000000;
 }
+
+.inputPosition option {
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px;
+gap: 10px;
+width: 878px;
+height: 41px;
+background: #FFFFFF;
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+}
+
+
 
 .inputEmail {
   display: flex;
@@ -525,14 +517,4 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-}
-
-.logo {
-  position: absolute;
-  width: 85px;
-  height: 85px;
-  left: calc(50% - 85px / 2 - 0.5px);
-  top: 1197px;
-
-  background: url("./Images/LOGO-10\ 2.png");
 }

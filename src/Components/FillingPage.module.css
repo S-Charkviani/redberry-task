@@ -1,0 +1,57 @@
+.main {
+    background: #292C2D;
+  }
+  
+  .title h1 {
+    position: absolute;
+    width: 223px;
+    height: 24px;
+    left: 671px;
+    top: 91px;
+  
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  
+    /* შავი/700 */
+  
+    color: #232323;
+  }
+  .line {
+    position: absolute;
+    width: 185px;
+    height: 0px;
+    left: 690px;
+    top: 130px;
+  
+    border: 2px solid #000000;
+  }
+  .title h2 {
+    position: absolute;
+    width: 289px;
+    height: 24px;
+    right: 671px;
+    top: 91px;
+  
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  
+    /* შავი/700 */
+  
+    color: #232323;
+  }
+
+  .logo {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    left: calc(50% - 85px / 2 - 0.5px);
+    top: 1197px;
+  
+    background: url("./Images/LOGO-10\ 2.png");
+  }
