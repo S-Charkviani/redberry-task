@@ -1,13 +1,8 @@
-
-import './App.css';
-import CoverPage from './Components/CoverPage';
+import "./App.css";
+import CoverPage from "./Components/CoverPage";
 
 function App() {
-  return(
-<CoverPage />
-  )
-  
-
+  return <CoverPage />;
 }
 
 export default App;
