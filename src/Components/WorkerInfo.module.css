@@ -17,22 +17,7 @@
   border-radius: 18px;
 }
 
-.inputName {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 8px 24px;
-  gap: 8px;
-
-  position: absolute;
-  width: 455px;
-  height: 134px;
-  left: 150px;
-  top: 88px;
-}
-
-.inputName label {
-  width: 407px;
+.form label{
   height: 21px;
 
   font-family: "Helvetica Neue";
@@ -55,27 +40,20 @@
   flex-grow: 0;
 }
 
-.inputName input {
+.form input{
   box-sizing: border-box;
-
-  width: 407px;
   height: 60px;
-
-  /* ლურჯი/400 */
-
   border: 1.8px solid #8ac0e2;
   border-radius: 8px;
 
   /* Inside auto layout */
-
   flex: none;
   order: 1;
   align-self: stretch;
   flex-grow: 0;
 }
 
-.inputName p {
-  width: 407px;
+.form p{
   height: 21px;
 
   font-family: "Helvetica Neue";
@@ -84,20 +62,67 @@
   font-size: 14px;
   line-height: 21px;
   /* identical to box height, or 150% */
-
   display: flex;
   align-items: center;
-
-  /* შავი/500 */
-
   color: #2e2e2e;
-
   /* Inside auto layout */
-
   flex: none;
   order: 2;
   align-self: stretch;
   flex-grow: 0;
+}
+
+.form select{
+  height: 60px;
+  background: #ebebeb;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.form option{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  
+  position: absolute;
+  width: 878px;
+  height: 205px;
+  left: 174px;
+  top: 326px;
+  
+  filter: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+}
+
+.inputName {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 24px;
+  gap: 8px;
+
+  position: absolute;
+  width: 455px;
+  height: 134px;
+  left: 150px;
+  top: 88px;
+}
+
+.inputName label {
+  width: 407px;
+  
+}
+
+.inputName input {
+  width: 407px;
+}
+
+.inputName p {
+  width: 407px;
 }
 
 .inputLastName {
@@ -115,71 +140,15 @@
 }
 .inputLastName label {
   width: 408px;
-  height: 21px;
 
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height, or 117% */
-
-  display: flex;
-  align-items: center;
-
-  color: #000000;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 .inputLastName input {
-  box-sizing: border-box;
-
   width: 408px;
-  height: 60px;
-
-  /* ლურჯი/400 */
-
-  border: 1.8px solid #8ac0e2;
-  border-radius: 8px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 .inputLastName p {
   width: 408px;
-  height: 21px;
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 21px;
-  /* identical to box height, or 150% */
-
-  display: flex;
-  align-items: center;
-
-  /* შავი/500 */
-
-  color: #2e2e2e;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 2;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 .inputTeam {
@@ -197,34 +166,9 @@
 
 .inputTeam select {
   width: 878px;
-  height: 60px;
-
-  background: #ebebeb;
-  border-radius: 8px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
+  
 }
 
-.inputTeam option {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  
-  position: absolute;
-  width: 878px;
-  height: 205px;
-  left: 174px;
-  top: 326px;
-  
-  filter: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.25));
-  border-radius: 8px;
-}
 
 
 /* needs check */
@@ -332,71 +276,14 @@ flex-grow: 0;
 
 .inputEmail label {
   width: 878px;
-  height: 21px;
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height, or 117% */
-
-  display: flex;
-  align-items: center;
-
-  color: #000000;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 .inputEmail input {
-  box-sizing: border-box;
-
   width: 878px;
-  height: 60px;
-
-  /* ლურჯი/400 */
-
-  border: 1.8px solid #8ac0e2;
-  border-radius: 8px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 .inputEmail p {
   width: 878px;
-  height: 21px;
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 21px;
-  /* identical to box height, or 150% */
-
-  display: flex;
-  align-items: center;
-
-  /* შავი/500 */
-
-  color: #2e2e2e;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 2;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 .inputNumber {
@@ -415,71 +302,14 @@ flex-grow: 0;
 
 .inputNumber label {
   width: 878px;
-  height: 21px;
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height, or 117% */
-
-  display: flex;
-  align-items: center;
-
-  color: #000000;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 .inputNumber input {
-  box-sizing: border-box;
-
   width: 878px;
-  height: 60px;
-
-  /* ლურჯი/400 */
-
-  border: 1.8px solid #8ac0e2;
-  border-radius: 8px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 .inputNumber p {
   width: 878px;
-  height: 21px;
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 21px;
-  /* identical to box height, or 150% */
-
-  display: flex;
-  align-items: center;
-
-  /* შავი/500 */
-
-  color: #2e2e2e;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 2;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 .button {
