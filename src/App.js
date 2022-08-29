@@ -1,10 +1,11 @@
-import classes from "./App.css";
+import "./App.css";
 import CoverPage from "./Components/CoverPage";
+import LaptopInfo from "./Components/LaptopInfo";
 import WorkerInfo from "./Components/WorkerInfo";
 
 function App() {
   return (
- <WorkerInfo />
+ <LaptopInfo />
   )
 }
 

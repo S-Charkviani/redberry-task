@@ -2,7 +2,7 @@
     background: #292C2D;
   }
   
-  .title h1 {
+  .page1 h1 {
     position: absolute;
     width: 223px;
     height: 24px;
@@ -19,7 +19,7 @@
   
     color: #232323;
   }
-  .line {
+  .line1 {
     position: absolute;
     width: 185px;
     height: 0px;
@@ -28,7 +28,7 @@
   
     border: 2px solid #000000;
   }
-  .title h2 {
+  .page1 h2 {
     position: absolute;
     width: 289px;
     height: 24px;
@@ -46,6 +46,16 @@
     color: #232323;
   }
 
+  .line2{
+    position: absolute;
+width: 263px;
+height: 0px;
+left: 973px;
+top: 130px;
+
+border: 2px solid #000000;
+  }
+
   .logo {
     position: absolute;
     width: 85px;
@@ -55,3 +65,4 @@
   
     background: url("./Images/LOGO-10\ 2.png");
   }
+

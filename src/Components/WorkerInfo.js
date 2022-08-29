@@ -1,11 +1,11 @@
 import React from "react";
-import FillingPage from "./FillingPage";
+import FormFrame from "./FormFrame";
 import classes from "./WorkerInfo.module.css";
 
 const WorkerInfo = () => {
   return (
     <div className={classes.main}>
-      <FillingPage />
+      < FormFrame/>
       <form className={classes.form}>
         <div>
           <div className={classes.inputName}>
