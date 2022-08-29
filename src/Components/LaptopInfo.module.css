@@ -95,17 +95,22 @@ flex-grow: 0;
   color: rgba(0, 0, 0, 0.6);
 }
 
-.formRadio{
-    box-sizing: border-box;
+.form button{
+  display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 18px 60px;
+gap: 20px;
+background: #62A1EB;
+border-radius: 8px;
+border-color: #FFFFFF;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
 
-    width: 20px;
-    height: 20px;
-    
-    border: 2px solid #4D9AC3;
-    
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+color: #FFFFFF;
+
 }
 
 .arrowButton {
@@ -179,26 +184,12 @@ flex-grow: 0;
 }
 
 .imageButton {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 60px;
-  gap: 20px;
-
+  
   position: absolute;
   width: 233px;
   height: 60px;
   left: calc(50% - 233px / 2 - 0.5px);
   top: 316px;
-
-  background: #62a1eb;
-  border-color: #FFFFFF;
-  border-radius: 8px;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
 }
 
 .laptopName {
@@ -584,4 +575,32 @@ color: #000000;
 flex: none;
 order: 1;
 flex-grow: 0;
+}
+
+.back p{
+  position: absolute;
+  width: 45px;
+  height: 21px;
+  left: 174px;
+  top: 1487px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height, or 117% */
+  
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.08em;
+  
+  color: #62A1EB;
+}
+
+
+.save{
+  position: absolute;
+width: 219px;
+height: 60px;
+right: 174px;
+top: 1466px;
+
 }

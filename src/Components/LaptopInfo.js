@@ -94,7 +94,12 @@ const LaptopInfo = () => {
 <input type="radio" id="New" name="New" value="New" />
 <label for="New">მეორადი</label><br></br>
 </div>
-
+<div className={classes.back}>
+<p>უკან</p>
+</div>
+<div className={classes.save}>
+    <button>შენახვა</button>
+</div>
       </form>
 
       <div className={classes.logo2}></div>
