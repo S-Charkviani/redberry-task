@@ -4,9 +4,8 @@ import LaptopInfo from "./Components/LaptopInfo";
 import WorkerInfo from "./Components/WorkerInfo";
 
 function App() {
-  return (
- <LaptopInfo />
-  )
+  return <WorkerInfo/>
+ 
 }
 
 export default App;

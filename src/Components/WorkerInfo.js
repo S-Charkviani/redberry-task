@@ -50,7 +50,7 @@ const WorkerInfo = () => {
 
         <div>
           <button className={classes.button}>
-            <p className={classes.next}>შემდეგი</p>
+            შემდეგი
           </button>
         </div>
       </form>

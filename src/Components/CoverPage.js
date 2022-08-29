@@ -12,13 +12,12 @@ const CoverPage = () => {
         <div className={classes.cover}></div>
         <div className={classes.logo01}></div>
       </div>
+<div className={classes.buttons}>
+  <button>ჩანაწერის დამატება</button>
+  <button>ჩანაწერების სია</button>
+</div>
 
-      <button className={classes.button1}>
-        <p>ჩანაწერის დამატება</p>
-      </button>
-      <button className={classes.button2}>
-        <p>ჩანაწერების სია </p>
-      </button>
+     
     </div>
   );
 };

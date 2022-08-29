@@ -17,7 +17,7 @@ const LaptopInfo = () => {
       <div className={classes.line2}></div>
 <div className={classes.imageBox}>
 <div className={classes.imageInstruction}>ჩააგდე ან ატვირთე ლეპტოპის ფოტო</div>
-<button className={classes.imageButton}><p>ატვირთე</p></button>
+<button className={classes.imageButton}>ატვირთე</button>
 </div>
 
 <div className={classes.laptopName}>

@@ -31,8 +31,6 @@ flex-grow: 0;
 .form label{
   height: 21px;
   width: 407px;
-  font-family: "Helvetica Neue";
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
@@ -50,9 +48,6 @@ flex-grow: 0;
 .form p{
   width: 407px;
   height: 21px;
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
@@ -89,9 +84,6 @@ flex-grow: 0;
   left: 16px;
   right: 16px;
   top: calc(50% - 21px / 2 - 0.5px);
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
@@ -175,8 +167,7 @@ flex-grow: 0;
   left: calc(50% - 195px / 2 + 0.5px);
   top: 175px;
 
-  font-family: "Helvetica Neue";
-  font-style: normal;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 38px;
@@ -202,26 +193,12 @@ flex-grow: 0;
   top: 316px;
 
   background: #62a1eb;
+  border-color: #FFFFFF;
   border-radius: 8px;
-}
-
-.imageButton p {
-  width: 90px;
-  height: 24px;
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
+  color: #ffffff;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-
-  color: #ffffff;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .laptopName {
@@ -257,9 +234,6 @@ flex-grow: 0;
   left: 16px;
   right: 83px;
   top: calc(50% - 21px / 2 - 0.5px);
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
@@ -319,9 +293,6 @@ flex-grow: 0;
   left: 16px;
   right: 83px;
   top: calc(50% - 21px / 2 - 0.5px);
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
@@ -545,9 +516,6 @@ flex-grow: 0;
 .conditionNew label{
     width: 50px;
 height: 21px;
-
-font-family: 'Helvetica Neue';
-font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 21px;
@@ -600,9 +568,6 @@ top: 1369px;
 .conditionSecondhand label{
     width: 72px;
 height: 21px;
-
-font-family: 'Helvetica Neue';
-font-style: normal;
 font-weight: 400;
 font-size: 16px;
 line-height: 21px;
