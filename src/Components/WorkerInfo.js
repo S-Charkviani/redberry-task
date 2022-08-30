@@ -5,7 +5,8 @@ import classes from "./WorkerInfo.module.css";
 const Backend = "https://pcfy.redberryinternship.ge/api";
 
 const WorkerInfo = () => {
-  const [teams, setTeams] = useState([]);
+  const [teams, setTeams] = useState([]); 
+  const [position, setPosition]=useState([]);
 
   const fetchTeamsHandler = useCallback(async () => {
     const response = await fetch(`${Backend}/teams`, {
@@ -28,7 +29,30 @@ const WorkerInfo = () => {
   useEffect(() => {
     fetchTeamsHandler();
   }, [fetchTeamsHandler]);
-console.log(teams)
+
+  const fetchPositionHandler = useCallback(async () => {
+    const response = await fetch(`${Backend}/positions`, {
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    const teamPosition = await response.json();
+    const loadedPositions = [];
+
+    for (const key in teamPosition.data) {
+      loadedPositions.push({
+        id: teamPosition.data[key].id,
+        name: teamPosition.data[key].name,
+      });
+    }
+    setPosition(loadedPositions);
+  }, []);
+
+
+  useEffect(() => {
+    fetchPositionHandler();
+  }, [fetchPositionHandler]);
+
   return (
     <div className={classes.main}>
       <FormFrame />
@@ -60,14 +84,16 @@ console.log(teams)
  <option>{teamsList.name}</option>)
               })}
              
-             
             </select>
           </div>
 
           <div className={classes.inputPosition}>
             <select required>
               <option hidden>პოზიცია</option>
-              <option>მენეჯერი</option>
+              {position.map((positionList)=>{
+                return(
+ <option>{positionList.name}</option>)
+              })}
             </select>
           </div>
 

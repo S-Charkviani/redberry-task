@@ -1,8 +1,60 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import FormFrame from "./FormFrame";
 import classes from "./LaptopInfo.module.css";
 
+const Backend = "https://pcfy.redberryinternship.ge/api";
+
 const LaptopInfo = () => {
+    const[brand, setBrand]=useState([]);
+const [cpu, setCpu]=useState([]);
+
+const fetchBrandHandler = useCallback(async () => {
+    const response = await fetch(`${Backend}/brands`, {
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    const brandData = await response.json();
+    const loadedBrands = [];
+
+    for (const key in brandData.data) {
+      loadedBrands.push({
+        id: brandData.data[key].id,
+        name: brandData.data[key].name,
+      });
+    }
+    setBrand(loadedBrands);
+  }, []);
+
+  useEffect(() => {
+    fetchBrandHandler();
+  }, [fetchBrandHandler]);
+
+
+
+const fetchCpuHandler = useCallback(async () => {
+    const response = await fetch(`${Backend}/cpus`, {
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    const cpuData = await response.json();
+    const loadedCpu = [];
+
+    for (const key in cpuData.data) {
+      loadedCpu.push({
+        id: cpuData.data[key].id,
+        name: cpuData.data[key].name,
+      });
+    }
+    setCpu(loadedCpu);
+  }, []);
+
+  useEffect(() => {
+    fetchCpuHandler();
+  }, [fetchCpuHandler]);
+
+
   return (
     <div className={classes.main}>
       <button>
@@ -28,6 +80,10 @@ const LaptopInfo = () => {
 <div className={classes.cpu}>
     <select>
         <option disabled selected>CPU</option>
+        {cpu.map((cpuList)=>{
+                return(
+ <option>{cpuList.name}</option>)
+              })}
     </select>
 </div>
 
@@ -56,7 +112,10 @@ const LaptopInfo = () => {
 <div className={classes.laptopBrand}>
     <select>
         <option disabled selected>ლეპტოპის ბრენდი</option>
-        <option>HP</option>
+        {brand.map((brandList)=>{
+                return(
+ <option>{brandList.name}</option>)
+              })}
     </select>
 </div>
 
