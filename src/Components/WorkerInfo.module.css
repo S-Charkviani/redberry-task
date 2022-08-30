@@ -19,25 +19,15 @@
 
 .form label{
   height: 21px;
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   /* identical to box height, or 117% */
-
   display: flex;
   align-items: center;
 
-  color: #000000;
-
   /* Inside auto layout */
 
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 .form input{
@@ -50,26 +40,13 @@
   flex: none;
   order: 1;
   align-self: stretch;
-  flex-grow: 0;
 }
 
-.form p{
-  height: 21px;
-
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 21px;
-  /* identical to box height, or 150% */
-  display: flex;
-  align-items: center;
-  color: #2e2e2e;
-  /* Inside auto layout */
-  flex: none;
-  order: 2;
-  align-self: stretch;
-  flex-grow: 0;
+.form small{
+  color: #2E2E2E;
+ order: 2;
+ width: 407px;
+height: 21px;
 }
 
 .form select{
@@ -79,23 +56,16 @@
   flex: none;
   order: 0;
   align-self: stretch;
-  flex-grow: 0;
 }
 
 .form option{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  
-  position: absolute;
-  width: 878px;
-  height: 205px;
-  left: 174px;
-  top: 326px;
-  
-  filter: drop-shadow(0px 4px 34px rgba(0, 0, 0, 0.25));
-  border-radius: 8px;
+  padding: 10px;
+gap: 10px;
+width: 878px;
+height: 41px;
+background: #FFFFFF;
+/* Inside auto layout */
+order: 4;
 }
 
 .inputName {
@@ -112,18 +82,10 @@
   top: 88px;
 }
 
-.inputName label {
-  width: 407px;
-  
-}
-
 .inputName input {
   width: 407px;
 }
 
-.inputName p {
-  width: 407px;
-}
 
 .inputLastName {
   display: flex;
@@ -138,68 +100,26 @@
   left: calc(50%);
   top: 88px;
 }
-.inputLastName label {
-  width: 408px;
-
-}
 
 .inputLastName input {
   width: 408px;
 }
 
-.inputLastName p {
-  width: 408px;
-}
-
 .inputTeam {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding: 8px 24px;
-
   position: absolute;
-  width: 926px;
-  height: 76px;
   left: calc(50% - 926px / 2);
   top: 258px;
 }
 
 .inputTeam select {
   width: 878px;
-  
 }
 
-
-
-/* needs check */
-.inputTeam option.selected{
-  position: absolute;
-  height: 21px;
-  left: 16px;
-  right: 83px;
-  top: calc(50% - 21px/2 - 0.5px);
-  font-family: 'Helvetica Neue';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height, or 117% */
-  
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.04em;
-  
-  color: #000000;
-  
-
-}
 
 .inputPosition {
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding: 8px 24px;
-
   position: absolute;
   width: 926px;
   height: 76px;
@@ -209,64 +129,15 @@
 
 .inputPosition select {
   width: 878px;
-  height: 60px;
-
-  background: #ebebeb;
-  border-radius: 8px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-}
-
-/* need check */
-.inputPosition select.selected{  
-  position: absolute;
-  height: 21px;
-  left: 16px;
-  right: 83px;
-  top: calc(50% - 21px/2 - 0.5px);
-  font-family: 'Helvetica Neue';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height, or 117% */
   
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.04em;
-  
-  color: #000000;
 }
-
-.inputPosition option {
-  display: flex;
-flex-direction: row;
-align-items: center;
-padding: 10px;
-gap: 10px;
-width: 878px;
-height: 41px;
-background: #FFFFFF;
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 0;
-}
-
 
 
 .inputEmail {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding: 8px 24px;
   gap: 8px;
-
   position: absolute;
   width: 926px;
   height: 134px;
@@ -274,15 +145,7 @@ flex-grow: 0;
   top: 482px;
 }
 
-.inputEmail label {
-  width: 878px;
-}
-
 .inputEmail input {
-  width: 878px;
-}
-
-.inputEmail p {
   width: 878px;
 }
 
@@ -300,38 +163,24 @@ flex-grow: 0;
   top: 648px;
 }
 
-.inputNumber label {
-  width: 878px;
-}
-
 .inputNumber input {
-  width: 878px;
-}
-
-.inputNumber p {
   width: 878px;
 }
 
 .button {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   padding: 18px 60px;
   gap: 20px;
-
   position: absolute;
   width: 176px;
   height: 60px;
   right: 174px;
   top: 869px;
-
   background: #62a1eb;
   border-radius: 8px;
   border-color:white;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-
   color: #ffffff;
 }

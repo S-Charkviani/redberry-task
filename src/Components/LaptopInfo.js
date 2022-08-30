@@ -16,14 +16,14 @@ const LaptopInfo = () => {
       <div className={classes.line1}></div>
       <div className={classes.line2}></div>
 <div className={classes.imageBox}>
-<div className={classes.imageInstruction}>ჩააგდე ან ატვირთე ლეპტოპის ფოტო</div>
-<button className={classes.imageButton}>ატვირთე</button>
+<p>ჩააგდე ან ატვირთე ლეპტოპის ფოტო</p>
+<button>ატვირთე</button>
 </div>
 
 <div className={classes.laptopName}>
     <label>ლეპტოპის სახელი</label>
     <input type='text'  placeholder="HP"></input>
-    <p>ლათინური ასოები, ციფრები, !@#$%^&*()_+=</p>
+    <small>ლათინური ასოები, ციფრები, !@#$%^&*()_+=</small>
 </div>
 <div className={classes.cpu}>
     <select>
@@ -34,19 +34,19 @@ const LaptopInfo = () => {
 <div className={classes.core}>
     <label>CPU-ს ბირთვი</label>
     <input type='number' placeholder="14"></input>
-    <p>მხოლოდ ციფრები</p>
+    <small>მხოლოდ ციფრები</small>
 </div>
 
 <div className={classes.flow}>
     <label>CPU-ს ნაკადი</label>
     <input type='number' placeholder="365"></input>
-    <p>მხოლოდ ციფრები</p>
+    <small>მხოლოდ ციფრები</small>
 </div>
 
 <div className={classes.ram}>
     <label>ლეპტოპის Ram (GB)</label>
     <input type='number' placeholder='16'></input>
-    <p>მხოლოდ ციფრები</p>
+    <small>მხოლოდ ციფრები</small>
 </div>
 
 <div className={classes.memoryType}>
@@ -79,7 +79,7 @@ const LaptopInfo = () => {
 <div className={classes.price}>
     <label>ლეპტოპის ფასი</label>
     <input type='price' placeholder='0000'></input>
-    <p>მხოლოდ ციფრები</p>
+    <small>მხოლოდ ციფრები</small>
 </div>
 
 <div className={classes.condition}>

@@ -28,7 +28,7 @@ const WorkerInfo = () => {
   useEffect(() => {
     fetchTeamsHandler();
   }, [fetchTeamsHandler]);
-
+console.log(teams)
   return (
     <div className={classes.main}>
       <FormFrame />
@@ -37,7 +37,7 @@ const WorkerInfo = () => {
           <div className={classes.inputName}>
             <label htmlFor="name">სახელი</label>
             <input required type="text" id="name" placeholder="გრიშა" />
-            <p>მინიმუმ ორი სიმბოლო, ქართული ასოები</p>
+            <small>მინიმუმ ორი სიმბოლო, ქართული ასოები</small>
           </div>
 
           <div className={classes.inputLastName}>
@@ -48,14 +48,19 @@ const WorkerInfo = () => {
               id="lastName"
               placeholder="ბაგრატიონი"
             />
-            <p>მინიმუმ ორი სიმბოლო, ქართული ასოები</p>
+            <small>მინიმუმ ორი სიმბოლო, ქართული ასოები</small>
           </div>
           <div className={classes.inputTeam}>
             <select required>
-              <option disabled selected>
+            <option disabled selected >
                 თიმი
               </option>
-              <option>მარკეტინგი</option>
+              {teams.map((teamsList)=>{
+                return(
+ <option>{teamsList.name}</option>)
+              })}
+             
+             
             </select>
           </div>
 
@@ -74,7 +79,7 @@ const WorkerInfo = () => {
               id="email"
               placeholder="grish666@redberry.ge"
             />
-            <p>უნდა მთავრდებოდეს @redberry.ge-ით</p>
+            <small>უნდა მთავრდებოდეს @redberry.ge-ით</small>
           </div>
 
           <div className={classes.inputNumber}>
@@ -85,7 +90,7 @@ const WorkerInfo = () => {
               id="number"
               placeholder="+995 598 00 07 01"
             />
-            <p>უნდა აკმაყოფილებდეს ქართული მობ.ნომრის ფორმატს</p>
+            <small>უნდა აკმაყოფილებდეს ქართული მობ.ნომრის ფორმატს</small>
           </div>
         </div>
 

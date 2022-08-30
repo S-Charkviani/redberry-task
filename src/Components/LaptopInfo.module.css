@@ -11,21 +11,14 @@
 
 .form input{
     box-sizing: border-box;
-
 width: 407px;
 height: 60px;
-
-/* ლურჯი/400 */
-
-border: 1.8px solid #8AC0E2;
+border: 1.8px solid #8ac0e2;
 border-radius: 8px;
-
 /* Inside auto layout */
-
 flex: none;
 order: 1;
 align-self: stretch;
-flex-grow: 0;
 }
 
 .form label{
@@ -37,7 +30,6 @@ flex-grow: 0;
   /* identical to box height, or 117% */
   display: flex;
   align-items: center;
-  color: #000000;
   /* Inside auto layout */
   flex: none;
   order: 0;
@@ -45,55 +37,24 @@ flex-grow: 0;
   flex-grow: 0;
 }
 
-.form p{
+.form small{
   width: 407px;
   height: 21px;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 21px;
-
-  display: flex;
-  align-items: center;
-
   color: #2e2e2e;
-
-  flex: none;
   order: 2;
-  align-self: stretch;
-  flex-grow: 0;
+  
 }
 
 .form select {
   width: 408px;
   height: 60px;
-
   background: #ebebeb;
   border-radius: 8px;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
-  align-self: stretch;
-  flex-grow: 0;
+  
 }
 
-.form ::placeholder {
-  position: absolute;
-  height: 21px;
-  left: 16px;
-  right: 16px;
-  top: calc(50% - 21px / 2 - 0.5px);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
-  /* identical to box height, or 131% */
-
-  display: flex;
-  align-items: center;
-
-  color: rgba(0, 0, 0, 0.6);
-}
 
 .form button{
   display: flex;
@@ -110,7 +71,18 @@ font-size: 20px;
 line-height: 24px;
 
 color: #FFFFFF;
+}
 
+.form option{
+  position: absolute;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height, or 117% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
 }
 
 .arrowButton {
@@ -119,7 +91,8 @@ color: #FFFFFF;
   height: 53px;
   left: 70px;
   top: 53px;
-  background-image: url("./Images/Ellipse\ 1.png");
+  border-radius: 50%;
+  background: #D9D9D9;
 }
 
 .arrow {
@@ -128,8 +101,6 @@ color: #FFFFFF;
   height: 16px;
   left: 90px;
   top: 72px;
-
-  /* შავი/500 */
   background-image: url("./Images/Vector.png");
 }
 
@@ -165,14 +136,12 @@ color: #FFFFFF;
   border-radius: 18px;
 }
 
-.imageInstruction {
+.imageBox p {
   position: absolute;
   width: 195px;
   height: 76px;
   left: calc(50% - 195px / 2 + 0.5px);
   top: 175px;
-
-
   font-weight: 500;
   font-size: 20px;
   line-height: 38px;
@@ -183,7 +152,7 @@ color: #FFFFFF;
   color: #4386a9;
 }
 
-.imageButton {
+.imageBox button {
   
   position: absolute;
   width: 233px;
@@ -198,7 +167,6 @@ color: #FFFFFF;
   align-items: flex-start;
   padding: 8px 24px;
   gap: 8px;
-
   position: absolute;
   width: 455px;
   height: 134px;
@@ -207,35 +175,12 @@ color: #FFFFFF;
 }
 
 .laptopBrand {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding: 8px 24px;
-
   position: absolute;
-  width: 456px;
-  height: 76px;
   left: calc(50% - 456px / 2 + 235px);
   top: 563px;
 }
 
-.laptopBrand option {
-  position: absolute;
-  height: 21px;
-  left: 16px;
-  right: 83px;
-  top: calc(50% - 21px / 2 - 0.5px);
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height, or 117% */
-
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.04em;
-
-  color: #000000;
-}
 
 .line1 {
   position: absolute;
@@ -243,8 +188,6 @@ color: #FFFFFF;
   left: 150px;
   right: 174px;
   top: 711px;
-
-  /* შავი/200 */
 
   border: 1px solid #c7c7c7;
 }
@@ -262,9 +205,6 @@ color: #FFFFFF;
 }
 
 .cpu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding: 8px 24px;
 
   position: absolute;
@@ -276,24 +216,6 @@ color: #FFFFFF;
 
 .cpu select {
   width: 277px;
-}
-
-.cpu option {
-  position: absolute;
-  height: 21px;
-  left: 16px;
-  right: 83px;
-  top: calc(50% - 21px / 2 - 0.5px);
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height, or 117% */
-
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.04em;
-
-  color: #000000;
 }
 
 .core {
@@ -310,10 +232,6 @@ color: #FFFFFF;
   height: 134px;
   left: calc(50% - 324px / 2);
   top: 753px;
-}
-
-.core label {
-  width: 276px;
 }
 
 .core input {
@@ -334,15 +252,7 @@ color: #FFFFFF;
   top: 753px;
 }
 
-.flow label {
-  width: 276px;
-}
-
 .flow input {
-  width: 276px;
-}
-
-.flow p {
   width: 276px;
 }
 
@@ -502,27 +412,6 @@ border: 2px solid #4D9AC3;
 flex: none;
 order: 0;
 flex-grow: 0;
-}
-
-.conditionNew label{
-    width: 50px;
-height: 21px;
-font-weight: 400;
-font-size: 16px;
-line-height: 21px;
-/* identical to box height, or 131% */
-
-display: flex;
-align-items: center;
-
-color: #000000;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 0
 }
 
 .conditionSecondhand{
