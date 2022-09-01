@@ -9,29 +9,7 @@
     padding-bottom: 2rem;
     gap: 3rem;
   }
-  
-  .imageBox {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 30rem;
-    background: #f7f7f7;
-    /* ლურჯი/700 */
-    border: 2px dashed #4386a9;
-    border-radius: 18px;
-    
-  }
-  
-  .imageBox p {
-    font-weight: 500;
-    font-size: 20px;
-    color: #4386a9;
-  }
-  
+
   .form input {
     box-sizing: border-box;
     height: 60px;
@@ -153,6 +131,7 @@
     display: flex;
     justify-content: flex-end;
   }
+  
   .form button {
     padding: 18px 60px;
     background: #62a1eb;
@@ -163,6 +142,9 @@
     color: #ffffff;
   }
 
-  .form :invalid{
-    border-color:red;
+  .backButton{
+    background-color:#ffffff;
+    color: #62a1eb;
   }
+
+ 

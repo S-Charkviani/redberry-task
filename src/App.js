@@ -19,9 +19,6 @@ function App() {
       <Route path="/form" exact>
           <FormFrame/> 
         </Route>
-        <Route path="/laptopInfo">
-          <LaptopInfo/>
-        </Route>
         </Switch>
     </main>
   )

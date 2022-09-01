@@ -4,8 +4,8 @@ import classes from "./Form.module.css";
 
 const Backend = "https://pcfy.redberryinternship.ge/api";
 
-const WorkerInfo = () => {
-  const history=useHistory();
+const WorkerInfo = ({ page, setPage, formData, setFormData}) => {
+  const history = useHistory();
   const [teams, setTeams] = useState([]);
   const [position, setPosition] = useState([]);
 
@@ -54,76 +54,86 @@ const WorkerInfo = () => {
   }, [fetchPositionHandler]);
 
   return (
-      <form className={classes.form}>
-        <div className={classes.generalInfo}>
-          <div className={classes.inputTypeInfo}>
-            <label htmlFor="name">სახელი</label>
-            <input required type="text" id="name" placeholder="გრიშა" />
-            <small>მინიმუმ ორი სიმბოლო, ქართული ასოები</small>
-          </div>
-
-          <div className={classes.inputTypeInfo}>
-            <label htmlFor="name">გვარი</label>
-            <input
-              required
-              type="text"
-              id="lastName"
-              placeholder="ბაგრატიონი"
-            />
-            <small>მინიმუმ ორი სიმბოლო, ქართული ასოები</small>
-          </div>
-</div>
-<div className={classes.generalInfoWhole}>
-          <div className={classes.selectTypeInfo}>
-            <select required>
-              <option disabled selected>
-                თიმი
-              </option>
-              {teams.map((teamsList) => {
-                return <option>{teamsList.name}</option>;
-              })}
-            </select>
-          </div>
-
-          <div className={classes.selectTypeInfo}>
-            <select required>
-              <option hidden>პოზიცია</option>
-              {position.map((positionList) => {
-                return <option>{positionList.name}</option>;
-              })}
-            </select>
-          </div>
-
-          <div className={classes.inputTypeInfo}>
-            <label htmlFor="name">მეილი</label>
-            <input
-              required
-              type="text"
-              id="email"
-              placeholder="grish666@redberry.ge"
-            />
-            <small>უნდა მთავრდებოდეს @redberry.ge-ით</small>
-          </div>
-
-          <div className={classes.inputTypeInfo}>
-            <label htmlFor="name">ტელეფონის ნომერი</label>
-            <input
-              required
-              type="number"
-              id="number"
-              placeholder="+995 598 00 07 01"
-            />
-            <small>უნდა აკმაყოფილებდეს ქართული მობ.ნომრის ფორმატს</small>
-          </div>
+    <form className={classes.form}>
+      <div className={classes.generalInfo}>
+        <div className={classes.inputTypeInfo}>
+          <label htmlFor="name">სახელი</label>
+          <input
+            required
+            type="text"
+            id="name"
+            placeholder="გრიშა"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          />
+          <small>მინიმუმ ორი სიმბოლო, ქართული ასოები</small>
         </div>
 
-<div className={classes.cornerButton}>
-        <Link to="/laptopInfo" >
-          <button>შემდეგი</button>
-        </Link>
+        <div className={classes.inputTypeInfo}>
+          <label htmlFor="name">გვარი</label>
+          <input required type="text" id="lastName" placeholder="ბაგრატიონი" value={formData.lastName}
+          onChange={(e) => setFormData({ ...formData, lastName: e.target.value})}/>
+          <small>მინიმუმ ორი სიმბოლო, ქართული ასოები</small>
         </div>
-      </form>
-    
+      </div>
+      <div className={classes.generalInfoWhole}>
+        <div className={classes.selectTypeInfo}>
+          <select required  onChange={(e) => setFormData({ ...formData, team: e.target.value})}>
+            <option disabled selected>
+              თიმი
+            </option>
+            {teams.map((teamsList) => {
+              return <option>{teamsList.name}</option>;
+            })}
+          </select>
+        </div>
+
+        <div className={classes.selectTypeInfo}>
+          <select required  onChange={(e) => setFormData({ ...formData, position: e.target.value})}>
+            <option hidden>პოზიცია</option>
+            {position.map((positionList) => {
+              return <option>{positionList.name}</option>;
+            })}
+          </select>
+        </div>
+
+        <div className={classes.inputTypeInfo}>
+          <label htmlFor="name">მეილი</label>
+          <input
+            required
+            type="text"
+            id="email"
+            placeholder="grish666@redberry.ge"
+            value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value})}
+          />
+          <small>უნდა მთავრდებოდეს @redberry.ge-ით</small>
+        </div>
+
+        <div className={classes.inputTypeInfo}>
+          <label htmlFor="name">ტელეფონის ნომერი</label>
+          <input
+            required
+            type="number"
+            id="number"
+            placeholder="+995 598 00 07 01"
+            value={formData.number}
+          onChange={(e) => setFormData({ ...formData, number: e.target.value})}
+          />
+          <small>უნდა აკმაყოფილებდეს ქართული მობ.ნომრის ფორმატს</small>
+        </div>
+      </div>
+
+      <div className={classes.cornerButton}>
+        <button
+          onClick={() => {
+            setPage(page + 1);
+          }}
+        >
+          შემდეგი
+        </button>
+      </div>
+    </form>
   );
 };
 
