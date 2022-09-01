@@ -1,36 +1,61 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
 import classes from "./FormFrame.module.css";
 import LaptopInfo from "./LaptopInfo";
 import WorkerInfo from "./WorkerInfo";
 
 const FormFrame = (props) => {
-  const history = useHistory();
-  let backHandler;
+  const [page, setPage] = useState(0);
+  const [formData, setFormData] = useState({
+    name: "",
+    lastName: "",
+    team: "",
+    position: "",
+    mail: "",
+    number: "",
+    laptopName: "",
+    brand: "",
+    cpu: "",
+    core: "",
+    flow: "",
+    ram: "",
+    SSD: "",
+    HDD: "",
+    date: "",
+    price: "",
+    new: "",
+    secondhand: "",
+  });
 
-  // if(WorkerInfo(props)){
-  //   backHandler=()=>history.push('/welcome');
-  //   }if (LaptopInfo(props)){
-  //     backHandler=()=>history.push('/worker-info');
-  //   };
+  const formPages = [
+    <WorkerInfo
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={setPage}
+    />,
+    <LaptopInfo
+      formData={formData}
+      setFormData={setFormData}
+      page={page}
+      setPage={setPage}
+    />,
+  ];
 
   return (
     <div className={classes.frame}>
       <div className={classes.arrowButton}>
-        <button >
+        <button>
           <div className={classes.arrow}></div>
         </button>
-        </div>
+      </div>
 
-        <div className={classes.title}>
-          <p> თანამშრომლის ინფო</p>
+      <div className={classes.title}>
+        <p> თანამშრომლის ინფო</p>
 
-          <p>ლეპტოპის მახასიათებლები</p>
-        </div>
-        
-      <div className={classes.formCard}>
-        <WorkerInfo/>
-        </div>
+        <p>ლეპტოპის მახასიათებლები</p>
+      </div>
+
+      <div className={classes.formCard}>{formPages[page]}</div>
       <div className={classes.logo}></div>
     </div>
   );
