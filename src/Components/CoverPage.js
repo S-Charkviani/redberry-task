@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./CoverPage.module.css";
 
-const CoverPage = () => {
+const CoverPage = (page, setPage) => {
   return (
     <div className={classes.mainPage}>
       {/* Redberry Logo */}
@@ -15,7 +15,9 @@ const CoverPage = () => {
       </div>
 <div className={classes.buttons}>
   <Link to='/form'>
-  <button>ჩანაწერის დამატება</button>
+  <button onClick={() => {
+            setPage(page +1);
+          }} >ჩანაწერის დამატება</button>
   </Link>
   <button>ჩანაწერების სია</button>
 </div>

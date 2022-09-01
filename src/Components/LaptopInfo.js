@@ -2,13 +2,15 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Redirect, useHistory } from "react-router-dom";
 import classes from "./Form.module.css";
 import Dropzone from "./dropZone";
+import Modal from 'react-overlays/Modal'
 
 const Backend = "https://pcfy.redberryinternship.ge/api";
 
-const LaptopInfo = ({ page, setPage, formData, setFormData }) => {
+const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => {
   const history = useHistory();
   const [brand, setBrand] = useState([]);
   const [cpu, setCpu] = useState([]);
+
 
   const fetchBrandHandler = useCallback(async () => {
     const response = await fetch(`${Backend}/brands`, {
@@ -54,7 +56,14 @@ const LaptopInfo = ({ page, setPage, formData, setFormData }) => {
     fetchCpuHandler();
   }, [fetchCpuHandler]);
 
+
+  const showSuccessHandler=(event)=>{
+    event.preventDefault()
+    setShowSuccess(true);
+  }
+
   return (
+    <div>
     <form className={classes.form}> 
         <Dropzone />
     
@@ -237,10 +246,13 @@ const LaptopInfo = ({ page, setPage, formData, setFormData }) => {
 
         </div>
         <div className={classes.save}>
-          <button>შენახვა</button>
+          <button onClick={showSuccessHandler}>
+            შენახვა</button>
         </div>
       </div>
     </form>
+    
+    </div>
   );
 };
 

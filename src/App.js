@@ -4,9 +4,13 @@ import CoverPage from "./Components/CoverPage";
 import LaptopInfo from "./Components/LaptopInfo";
 import WorkerInfo from "./Components/WorkerInfo";
 import FormFrame from "./Components/FormFrame";
+import { useState } from "react";
+import Success from "./Components/success";
 
 function App() {
+  const [formFinished, setFormFinished]=useState(false);
  
+
   return(
     <main>
       <Switch>
@@ -16,8 +20,9 @@ function App() {
       <Route path="/welcome">
         <CoverPage/>
         </Route>
-      <Route path="/form" exact>
-          <FormFrame/> 
+      <Route path="/form">
+          <FormFrame  /> 
+          <div>{formFinished&&<Success/>}</div>
         </Route>
         </Switch>
     </main>

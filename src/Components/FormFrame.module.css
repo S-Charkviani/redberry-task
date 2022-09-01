@@ -3,7 +3,7 @@
   flex-direction: column;
   position: absolute;
   width: 1920px;
-  background-color: gray;
+  background-color: #F6F6F6;
 }
 
 .arrowButton button{
@@ -14,6 +14,8 @@
   border-radius: 50%;
   background: #D9D9D9;
   justify-content: center;
+  margin-top: 4rem;
+  margin-left: 4rem;
 }
 
 .arrow {
@@ -28,7 +30,7 @@
     position: relative;
     align-content: center;
     display: flex;
-    flex:30%;
+    flex: wrap;
     width: 223px;
     height: 24px;
     font-weight: 700;
@@ -38,8 +40,8 @@
     width: 100%;
     align-self: stretch;
     gap: 4rem;
-    padding-top: 3rem;
-    padding-left: 40rem;
+    justify-content: center;
+    padding-bottom: 3rem;
 
   }
 
@@ -58,6 +60,7 @@ border: 2px solid #000000;
     display: flex;
     width: 70%;
     flex-direction: column;
+   
   }
 
   .logo {
@@ -68,4 +71,10 @@ border: 2px solid #000000;
     width: 85px;
     height: 85px;
     background: url("./Images/LOGO-10\ 2.png");
+  }
+
+  .Success{
+    position: fixed;
+    align-self: center;
+    width:50%;
   }
