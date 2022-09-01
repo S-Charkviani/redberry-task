@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./CoverPage.module.css";
 
 const CoverPage = () => {
@@ -13,7 +14,9 @@ const CoverPage = () => {
         <div className={classes.logo01}></div>
       </div>
 <div className={classes.buttons}>
+  <Link to='/form'>
   <button>ჩანაწერის დამატება</button>
+  </Link>
   <button>ჩანაწერების სია</button>
 </div>
 

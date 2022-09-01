@@ -1,12 +1,13 @@
 import React, { useCallback, useEffect, useState } from "react";
-import FormFrame from "./FormFrame";
-import classes from "./WorkerInfo.module.css";
+import { Link, useHistory } from "react-router-dom";
+import classes from "./Form.module.css";
 
 const Backend = "https://pcfy.redberryinternship.ge/api";
 
 const WorkerInfo = () => {
-  const [teams, setTeams] = useState([]); 
-  const [position, setPosition]=useState([]);
+  const history=useHistory();
+  const [teams, setTeams] = useState([]);
+  const [position, setPosition] = useState([]);
 
   const fetchTeamsHandler = useCallback(async () => {
     const response = await fetch(`${Backend}/teams`, {
@@ -48,23 +49,20 @@ const WorkerInfo = () => {
     setPosition(loadedPositions);
   }, []);
 
-
   useEffect(() => {
     fetchPositionHandler();
   }, [fetchPositionHandler]);
 
   return (
-    <div className={classes.main}>
-      <FormFrame />
       <form className={classes.form}>
-        <div>
-          <div className={classes.inputName}>
+        <div className={classes.generalInfo}>
+          <div className={classes.inputTypeInfo}>
             <label htmlFor="name">სახელი</label>
             <input required type="text" id="name" placeholder="გრიშა" />
             <small>მინიმუმ ორი სიმბოლო, ქართული ასოები</small>
           </div>
 
-          <div className={classes.inputLastName}>
+          <div className={classes.inputTypeInfo}>
             <label htmlFor="name">გვარი</label>
             <input
               required
@@ -74,30 +72,29 @@ const WorkerInfo = () => {
             />
             <small>მინიმუმ ორი სიმბოლო, ქართული ასოები</small>
           </div>
-          <div className={classes.inputTeam}>
+</div>
+<div className={classes.generalInfoWhole}>
+          <div className={classes.selectTypeInfo}>
             <select required>
-            <option disabled selected >
+              <option disabled selected>
                 თიმი
               </option>
-              {teams.map((teamsList)=>{
-                return(
- <option>{teamsList.name}</option>)
+              {teams.map((teamsList) => {
+                return <option>{teamsList.name}</option>;
               })}
-             
             </select>
           </div>
 
-          <div className={classes.inputPosition}>
+          <div className={classes.selectTypeInfo}>
             <select required>
               <option hidden>პოზიცია</option>
-              {position.map((positionList)=>{
-                return(
- <option>{positionList.name}</option>)
+              {position.map((positionList) => {
+                return <option>{positionList.name}</option>;
               })}
             </select>
           </div>
 
-          <div className={classes.inputEmail}>
+          <div className={classes.inputTypeInfo}>
             <label htmlFor="name">მეილი</label>
             <input
               required
@@ -108,7 +105,7 @@ const WorkerInfo = () => {
             <small>უნდა მთავრდებოდეს @redberry.ge-ით</small>
           </div>
 
-          <div className={classes.inputNumber}>
+          <div className={classes.inputTypeInfo}>
             <label htmlFor="name">ტელეფონის ნომერი</label>
             <input
               required
@@ -120,11 +117,13 @@ const WorkerInfo = () => {
           </div>
         </div>
 
-        <div>
-          <button className={classes.button}>შემდეგი</button>
+<div className={classes.cornerButton}>
+        <Link to="/laptopInfo" >
+          <button>შემდეგი</button>
+        </Link>
         </div>
       </form>
-    </div>
+    
   );
 };
 

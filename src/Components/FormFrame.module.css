@@ -1,49 +1,50 @@
-.main {
-    background: #292C2D;
-  }
+.frame{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 1920px;
+  background-color: gray;
+}
+
+.arrowButton{
   
-  .page1 h1 {
-    position: absolute;
+}
+
+.arrowButton button{
+  display: flex;
+  border-color: #D9D9D9;
+    width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background: #D9D9D9;
+  justify-content: center;
+}
+
+.arrow {
+  display: flex;
+  align-self: center;
+  width: 9.21px;
+  height: 16px;
+  background-image: url("./Images/Vector.png");
+}
+
+  .title{
+    position: relative;
+    align-content: center;
+    display: flex;
+    flex:30%;
     width: 223px;
     height: 24px;
-    left: 671px;
-    top: 91px;
-  
-    font-family: "Helvetica Neue";
-    font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-  
-    /* შავი/700 */
-  
     color: #232323;
-  }
-  .line1 {
-    position: absolute;
-    width: 185px;
-    height: 0px;
-    left: 690px;
-    top: 130px;
-  
-    border: 2px solid #000000;
-  }
-  .page1 h2 {
-    position: absolute;
-    width: 289px;
-    height: 24px;
-    right: 671px;
-    top: 91px;
-  
-    font-family: "Helvetica Neue";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-  
-    /* შავი/700 */
-  
-    color: #232323;
+    width: 100%;
+    align-self: stretch;
+    gap: 4rem;
+    padding-top: 3rem;
+    padding-left: 40rem;
+
   }
 
   .line2{
@@ -56,13 +57,19 @@ top: 130px;
 border: 2px solid #000000;
   }
 
-  .logo {
-    position: absolute;
-    width: 85px;
-    height: 85px;
-    left: calc(50% - 85px / 2 - 0.5px);
-    top: 1197px;
-  
-    background: url("./Images/LOGO-10\ 2.png");
+  .formCard{
+    align-self: center;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
   }
 
+  .logo {
+  position: relative;
+  align-self: center;
+ margin-top: 20px;
+ margin-bottom: 20px;
+    width: 85px;
+    height: 85px;
+    background: url("./Images/LOGO-10\ 2.png");
+  }
