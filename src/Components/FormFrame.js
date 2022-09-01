@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import CoverPage from "./CoverPage";
 import classes from "./FormFrame.module.css";
 import LaptopInfo from "./LaptopInfo";
+import Success from "./success";
 import WorkerInfo from "./WorkerInfo";
 
 const FormFrame = (props) => {
+  const [showSuccess, setShowSuccess]=useState(false);
+
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
@@ -27,6 +31,7 @@ const FormFrame = (props) => {
   });
 
   const formPages = [
+
     <WorkerInfo
       formData={formData}
       setFormData={setFormData}
@@ -38,13 +43,19 @@ const FormFrame = (props) => {
       setFormData={setFormData}
       page={page}
       setPage={setPage}
+      setShowSuccess={setShowSuccess}
     />,
   ];
 
   return (
+    <div>
     <div className={classes.frame}>
       <div className={classes.arrowButton}>
-        <button>
+        <button
+          onClick={() => {
+            setPage(page - 1);
+          }}
+        >
           <div className={classes.arrow}></div>
         </button>
       </div>
@@ -55,10 +66,14 @@ const FormFrame = (props) => {
         <p>ლეპტოპის მახასიათებლები</p>
       </div>
 
-      <div className={classes.formCard}>{formPages[page]}</div>
+      
+      <div className={classes.formCard}>{!showSuccess&&formPages[page]}</div>
+      
       <div className={classes.logo}></div>
+    </div>
+  
     </div>
   );
 };
 
-export default FormFrame;
+export default FormFrame
