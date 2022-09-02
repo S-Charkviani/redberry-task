@@ -1,12 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import classes from './success.module.css'
 
+const Success = () => {
 
-
-const Success = (setShowSuccess) => {
-
-}
 
   return (
     <div className={classes.backdrop}>
@@ -15,7 +12,7 @@ const Success = (setShowSuccess) => {
     <h1>ჩანაწერი დამატებულია!</h1>
     <div className={classes.buttons}>
     
-    <button onClick={popupCloseHandler}>სიაში გადაყვანა</button>
+    <button >სიაში გადაყვანა</button>
     
     <button>მთავარი</button>
     </div>
@@ -23,6 +20,6 @@ const Success = (setShowSuccess) => {
    
     </div>
   )
-
+}
 
 export default Success
