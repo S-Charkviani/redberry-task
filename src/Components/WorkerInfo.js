@@ -52,7 +52,7 @@ const WorkerInfo = ({ page, setPage, formData, setFormData }) => {
   }, [fetchPositionHandler]);
 
   return (
-    <form className={classes.form}>
+  <div>
       <div className={classes.generalInfo}>
         <div className={classes.inputTypeInfo}>
           <label htmlFor="name">სახელი</label>
@@ -76,7 +76,7 @@ const WorkerInfo = ({ page, setPage, formData, setFormData }) => {
             placeholder="ბაგრატიონი"
             value={formData.surname}
             onChange={(e) =>
-              setFormData({ ...formData, lastName: e.target.value })
+              setFormData({ ...formData, surname: e.target.value })
             }
           />
           <small>მინიმუმ ორი სიმბოლო, ქართული ასოები</small>
@@ -85,34 +85,30 @@ const WorkerInfo = ({ page, setPage, formData, setFormData }) => {
       <div className={classes.generalInfoWhole}>
         <div className={classes.selectTypeInfo}>
           <select
-            value={formData.team_id}
-            defaultValue={"default"}
             required
-            onChange={(e) => setFormData({ ...formData, team: e.target.value })}
+            onChange={(e) => setFormData({ ...formData, team_id: e.target.value })}
           >
             <option disabled value={"default"}>
               თიმი
             </option>
             {teams.map((teamsList) => {
-              return <option>{teamsList.name}</option>;
+              return (<option value={teamsList.id}>{teamsList.name}</option>);
             })}
           </select>
         </div>
 
         <div className={classes.selectTypeInfo}>
           <select
-          value={formData.position_id}
-            defaultValue={"default"}
             required
             onChange={(e) =>
-              setFormData({ ...formData, position: e.target.value })
+              setFormData({ ...formData, position_id: e.target.value })
             }
           >
             <option value={"default"} disabled>
               პოზიცია
             </option>
             {position.map((positionList) => {
-              return <option>{positionList.name}</option>;
+              return <option value={positionList.id}>{positionList.name}</option>;
             })}
           </select>
         </div>
@@ -141,7 +137,7 @@ const WorkerInfo = ({ page, setPage, formData, setFormData }) => {
             placeholder="+995 598 00 07 01"
             value={formData.phone_number}
             onChange={(e) =>
-              setFormData({ ...formData, number: e.target.value })
+              setFormData({ ...formData, phone_number: e.target.value })
             }
           />
           <small>უნდა აკმაყოფილებდეს ქართული მობ.ნომრის ფორმატს</small>
@@ -157,7 +153,7 @@ const WorkerInfo = ({ page, setPage, formData, setFormData }) => {
           შემდეგი
         </button>
       </div>
-    </form>
+      </div>
   );
 };
 
