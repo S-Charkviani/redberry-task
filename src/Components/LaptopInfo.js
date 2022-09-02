@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Redirect, useHistory } from "react-router-dom";
 import classes from "./Form.module.css";
 import Dropzone from "./dropZone";
-import Modal from 'react-overlays/Modal'
+
+
 
 const Backend = "https://pcfy.redberryinternship.ge/api";
 
@@ -10,6 +10,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
   
   const [brand, setBrand] = useState([]);
   const [cpu, setCpu] = useState([]);
+
 
 
   const fetchBrandHandler = useCallback(async () => {
@@ -83,13 +84,13 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
 
         <div className={classes.selectTypeInfo}>
           <select
+           defaultValue={"default"}
             onChange={(e) =>
               setFormData({ ...formData, brand: e.target.value })
+    
             }
           >
-            <option disabled selected>
-              ლეპტოპის ბრენდი
-            </option>
+            <option value={"default"} disabled>ლეპტოპის ბრენდი</option>
             {brand.map((brandList) => {
               return <option>{brandList.name}</option>;
             })}
@@ -102,9 +103,10 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
       <div className={classes.generalInfo}>
         <div className={classes.selectTypeInfo}>
           <select
+          defaultValue={"default"}
             onChange={(e) => setFormData({ ...formData, cpu: e.target.value })}
           >
-            <option disabled selected>
+            <option disabled value={"default"}>
               CPU
             </option>
             {cpu.map((cpuList) => {
@@ -161,7 +163,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
                 setFormData({ ...formData, SSD: e.target.value })
               }
             />
-            <label for="SSD">SSD</label>
+            <label >SSD</label>
 
             <input
               type="radio"
@@ -172,7 +174,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
                 setFormData({ ...formData, name: e.target.value })
               }
             />
-            <label for="HDD">HDD</label>
+            <label >HDD</label>
           </div>
           <small></small>
         </div>
@@ -217,7 +219,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
             value={formData.new}
             onChange={(e) => setFormData({ ...formData, new: e.target.value })}
           />
-          <label for="New">ახალი</label>
+          <label >ახალი</label>
           <br></br>
 
           <input
@@ -229,7 +231,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
               setFormData({ ...formData, secondhand: e.target.value })
             }
           />
-          <label for="New">მეორადი</label>
+          <label >მეორადი</label>
           <br></br>
         </div>
       </div>
