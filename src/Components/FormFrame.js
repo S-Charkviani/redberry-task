@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import CoverPage from "./CoverPage";
+import React, { useEffect, useState } from "react";
 import classes from "./FormFrame.module.css";
 import LaptopInfo from "./LaptopInfo";
 import Success from "./success";
@@ -11,24 +10,25 @@ const FormFrame = (props) => {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
-    lastName: "",
-    team: "",
-    position: "",
-    mail: "",
-    number: "",
-    laptopName: "",
-    brand: "",
-    cpu: "",
-    core: "",
-    flow: "",
-    ram: "",
-    SSD: "",
-    HDD: "",
-    date: "",
-    price: "",
-    new: "",
-    secondhand: "",
+    surname: "",
+    team_id: "",
+    position_id: "",
+    email: "",
+    phone_number: "",
+    laptop_image:"",
+    laptop_name: "",
+    laptop_brand_id: "",
+    laptop_cpu: "",
+    laptop_cpu_cores: "",
+    laptop_cpu_threads: "",
+    laptop_ram: "",
+    laptop_hard_drive_type:"",
+    laptop_purchase_date: "",
+    laptop_price: "",
+    laptop_state:"",
+    token:"432db06872e4e66009d4636e383c03a7",
   });
+
 
   const formPages = [
 

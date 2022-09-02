@@ -74,7 +74,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
           <input
             type="text"
             placeholder="HP"
-            value={formData.laptopName}
+            value={formData.laptop_name}
             onChange={(e) =>
               setFormData({ ...formData, laptopName: e.target.value })
             }
@@ -84,6 +84,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
 
         <div className={classes.selectTypeInfo}>
           <select
+          value={formData.laptop_brand}
            defaultValue={"default"}
             onChange={(e) =>
               setFormData({ ...formData, brand: e.target.value })
@@ -103,6 +104,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
       <div className={classes.generalInfo}>
         <div className={classes.selectTypeInfo}>
           <select
+          value={formData.laptop_cpu}
           defaultValue={"default"}
             onChange={(e) => setFormData({ ...formData, cpu: e.target.value })}
           >
@@ -116,11 +118,11 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
         </div>
 
         <div className={classes.inputTypeInfo}>
-          <label>CPU-ს ბირთვი</label>
+          <label >CPU-ს ბირთვი</label>
           <input
             type="number"
             placeholder="14"
-            value={formData.core}
+            value={formData.laptop_cpu_cores}
             onChange={(e) => setFormData({ ...formData, core: e.target.value })}
           ></input>
           <small>მხოლოდ ციფრები</small>
@@ -131,7 +133,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
           <input
             type="number"
             placeholder="365"
-            value={formData.flow}
+            value={formData.laptop_cpu_threads}
             onChange={(e) => setFormData({ ...formData, flow: e.target.value })}
           ></input>
           <small>მხოლოდ ციფრები</small>
@@ -158,7 +160,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
               type="radio"
               id="SSD"
               name="SSD"
-              value={formData.SSD}
+              value={formData.hard_drive_type}
               onChange={(e) =>
                 setFormData({ ...formData, SSD: e.target.value })
               }
@@ -169,7 +171,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
               type="radio"
               id="HDD"
               name="HDD"
-              value={formData.HDD}
+              value={formData.hard_drive_type}
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
@@ -187,7 +189,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
           <label>შეძენის რიცხვი(არჩევითი)</label>
           <input
             placeholder="დდ/თთ/წწწწ"
-            value={formData.date}
+            value={formData.laptop_purchase_date}
             onChange={(e) => setFormData({ ...formData, date: e.target.value })}
           ></input>
           <small> </small>
@@ -198,7 +200,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
           <input
             type="price"
             placeholder="0000"
-            value={formData.price}
+            value={formData.leptop_price}
             onChange={(e) =>
               setFormData({ ...formData, price: e.target.value })
             }
@@ -216,7 +218,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
             type="radio"
             id="New"
             name="New"
-            value={formData.new}
+            value={formData.leptop_state}
             onChange={(e) => setFormData({ ...formData, new: e.target.value })}
           />
           <label >ახალი</label>
@@ -226,7 +228,7 @@ const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => 
             type="radio"
             id="New"
             name="New"
-            value={formData.secondhand}
+            value={formData.leptop_state}
             onChange={(e) =>
               setFormData({ ...formData, secondhand: e.target.value })
             }
