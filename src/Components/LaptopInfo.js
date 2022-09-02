@@ -7,7 +7,7 @@ import Modal from 'react-overlays/Modal'
 const Backend = "https://pcfy.redberryinternship.ge/api";
 
 const LaptopInfo = ({ page, setPage, formData, setFormData, setShowSuccess}) => {
-  const history = useHistory();
+  
   const [brand, setBrand] = useState([]);
   const [cpu, setCpu] = useState([]);
 

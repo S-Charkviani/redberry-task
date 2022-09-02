@@ -47,6 +47,7 @@ const FormFrame = (props) => {
     />,
   ];
 
+ 
   return (
     <div>
     <div className={classes.frame}>
@@ -67,8 +68,8 @@ const FormFrame = (props) => {
       </div>
 
       
-      <div className={classes.formCard}>{!showSuccess&&formPages[page]}</div>
-      
+      <div className={classes.formCard}>{formPages[page]}</div>
+      <div>{showSuccess&&<Success/>}</div>
       <div className={classes.logo}></div>
     </div>
   

@@ -8,9 +8,9 @@ import { useState } from "react";
 import Success from "./Components/success";
 
 function App() {
-  const [formFinished, setFormFinished]=useState(false);
+  
  
-
+console.log(showSuccess)
   return(
     <main>
       <Switch>
@@ -21,8 +21,8 @@ function App() {
         <CoverPage/>
         </Route>
       <Route path="/form">
-          <FormFrame  /> 
-          <div>{formFinished&&<Success/>}</div>
+          <FormFrame /> 
+          
         </Route>
         </Switch>
     </main>
