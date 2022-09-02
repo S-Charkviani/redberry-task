@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
 import classes from "./Form.module.css";
-import Dropzone from "./dropZone";
 
 const Backend = "https://pcfy.redberryinternship.ge/api";
 
@@ -78,7 +77,13 @@ const LaptopInfo = ({
 
   return (
     <div>
-      <Dropzone onChange={imageUpload} />
+      <div className={classes.imageBox}>
+        <input onChange={imageUpload} type='file'/>
+        <div className={classes.boxTitle}>
+        <p>ჩააგდე ან ატვირთე ლეპტოპის ფოტო</p>
+        <button >ატვირთე</button>
+        </div>
+      </div>
 
       <div className={classes.generalInfo}>
         <div className={classes.inputTypeInfo}>

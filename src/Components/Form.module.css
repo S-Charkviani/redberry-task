@@ -82,14 +82,53 @@
     gap: 1rem;
     border:0;
   }
+  .imageBox {
+    display: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30rem;
+    background: #f7f7f7;
+    /* ლურჯი/700 */
+    border: 2px dashed #4386a9;
+    border-radius: 18px;
+}
 
-  span {
+.imageBox input{
+  position: absolute;
+  box-sizing: border-box;
+
+  width: 52%;
+  height: 25%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.boxTitle {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding-top: 20%;
+  
+}
+  .imageBox p {
+    font-weight: 500;
+    font-size: 20px;
+    color: #4386a9;
+  }
+
+
+
+
+  span{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     width: 95%;
     color: #797979;
-    
   }
   
   .selectTypeInfo{
