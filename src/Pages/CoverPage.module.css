@@ -1,0 +1,67 @@
+.mainPage {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+
+  background: #ffffff;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  position: absolute;
+  top: 787px;
+  left: calc(50% - 387px/2 - 0.5px);
+}
+.buttons button{
+padding: 18px 60px;
+background: #62A1EB;
+border-radius: 8px;
+width: 387px;
+height: 60px;
+align-items: center;
+justify-content: space-between;
+border-color: #ffffff;
+color: #ffffff;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+}
+
+.frame {
+  position: absolute;
+  width: 781px;
+  height: 482px;
+  left: 589px;
+  top: 182px;
+}
+
+.cover {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background-image: url("../Images/Layer1.png");
+}
+
+.logo01 {
+  position: absolute;
+  left: 58.51%;
+  right: 35.21%;
+  top: 78.22%;
+  bottom: 11.62%;
+
+  background: url("../Images/LOGO-10\ 1.png");
+}
+
+.logo02 {
+  position: absolute;
+  width: 112px;
+  height: 18px;
+  left: calc(50% - 112px / 2);
+  top: 79px;
+
+  background-image: url('../Images/LOGO-02.png');
+}
