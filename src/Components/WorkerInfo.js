@@ -1,13 +1,15 @@
 import React, { useCallback, useEffect, useState } from "react";
-import classes from "./Form.module.css";
+import classes from "../Pages/FormPage.module.css";
+
 
 const Backend = "https://pcfy.redberryinternship.ge/api";
 
-const WorkerInfo = ({ page, setPage, formData, setFormData }) => {
+const WorkerInfo = ({ page, setPage, formData, setFormData,}) => {
   const [teams, setTeams] = useState([]);
   const [position, setPosition] = useState([]);
+  const [selectedTeam, setSelectedTeam]=useState();
 
-  const fetchTeamsHandler = useCallback(async () => {
+  const fetchTeamsHandler = async () => {
     const response = await fetch(`${Backend}/teams`, {
       headers: {
         Accept: "application/json",
@@ -23,33 +25,37 @@ const WorkerInfo = ({ page, setPage, formData, setFormData }) => {
       });
     }
     setTeams(loadedTeams);
-  }, []);
+  };
 
   useEffect(() => {
     fetchTeamsHandler();
-  }, [fetchTeamsHandler]);
+  }, []);
 
-  const fetchPositionHandler = useCallback(async () => {
+  const fetchPositionHandler = async () => {
     const response = await fetch(`${Backend}/positions`, {
       headers: {
         Accept: "application/json",
       },
     });
-    const teamPosition = await response.json();
+    const positionData = await response.json();
     const loadedPositions = [];
 
-    for (const key in teamPosition.data) {
-      loadedPositions.push({
-        id: teamPosition.data[key].id,
-        name: teamPosition.data[key].name,
-      });
+    for (const key in positionData.data) {
+        if(selectedTeam ==positionData.data[key].team_id){
+          loadedPositions.push({
+          id: positionData.data[key].id,
+          name: positionData.data[key].name,
+        })
+      };
     }
     setPosition(loadedPositions);
-  }, []);
+  };
 
   useEffect(() => {
     fetchPositionHandler();
-  }, [fetchPositionHandler]);
+  }, [selectedTeam]);
+
+  
 
   return (
   <div>
@@ -62,7 +68,9 @@ const WorkerInfo = ({ page, setPage, formData, setFormData }) => {
             id="name"
             placeholder="გრიშა"
             value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, name: e.target.value })
+            }
           />
           <small>მინიმუმ ორი სიმბოლო, ქართული ასოები</small>
         </div>
@@ -86,7 +94,8 @@ const WorkerInfo = ({ page, setPage, formData, setFormData }) => {
         <div className={classes.selectTypeInfo}>
           <select
             required
-            onChange={(e) => setFormData({ ...formData, team_id: e.target.value })}
+        onChange={(e) => {setSelectedTeam(e.target.value);
+          setFormData({ ...formData, team_id: e.target.value })}}
           >
             <option disabled value={"default"}>
               თიმი
