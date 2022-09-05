@@ -17,7 +17,9 @@ const CoverPage = (page, setPage) => {
   <Link to='/form'>
   <button  >ჩანაწერის დამატება</button>
   </Link>
+  <Link to="/list">
   <button>ჩანაწერების სია</button>
+  </Link>
 </div>
 
      
