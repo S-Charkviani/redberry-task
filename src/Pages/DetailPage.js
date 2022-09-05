@@ -47,7 +47,7 @@ const DetailPage = (laptopId) => {
   
       let teams;
       for (const key in responseData.data) {
-        if (selected.teamId == responseData.data[key].id) {
+        if (selected.teamId === responseData.data[key].id) {
           teams = responseData.data[key].name;
         }
   
@@ -67,8 +67,8 @@ const DetailPage = (laptopId) => {
       let positions;
   
       for (const key in responseData.data) {
-        if (selected.teamId == responseData.data[key].team_id) {
-          if (selected.positionId == responseData.data[key].id) {
+        if (selected.teamId === responseData.data[key].team_id) {
+          if (selected.positionId === responseData.data[key].id) {
             positions = responseData.data[key].name;
           }
           setPosition(positions);

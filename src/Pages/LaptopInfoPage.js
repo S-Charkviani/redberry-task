@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import DetailPage from './DetailPage';
 import classes from './DetailPage.module.css'
 
 const LaptopInfoPage = () => {

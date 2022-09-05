@@ -7,9 +7,7 @@ const WorkerForm = ({ page, setPage, formData, setFormData }) => {
   const [teams, setTeams] = useState([]);
   const [position, setPosition] = useState([]);
   const [selectedTeam, setSelectedTeam] = useState();
-  const [nameReg, setNameReg] = useState();
-  const [emailReg, setEmailReg] = useState();
-  const [numReg, setNumReg] = useState();
+ 
 
   const fetchTeamsHandler = async () => {
     const response = await fetch(`${Backend}/teams`, {
@@ -58,26 +56,16 @@ const WorkerForm = ({ page, setPage, formData, setFormData }) => {
     fetchPositionHandler();
   }, [selectedTeam]);
 
-  const geRegex = new RegExp(/^([\u10D0-\u10F0]{2,})$/);
-  const mailRegex = new RegExp("[a-z0-9]+@redberry.ge");
-  const numRegex = new RegExp(/^(\+?995)(5)[0-9]{8}/);
-
+  
  
   const nameValid= (event) => {
-    if (geRegex.test(event.target.value)) {
-      setNameReg(true);
+  
       setFormData({ ...formData, name: event.target.value });
-    } else {
-      setNameReg(false);
-    }
+
   };
 const surnameValid=(event) => {
-  if (geRegex.test(event.target.value)) {
-    setNameReg(true);
     setFormData({ ...formData, surname: event.target.value });
-  } else {
-    setNameReg(false);
-  }
+  
 };
 
 const teamsValid = (event) => {
@@ -90,20 +78,12 @@ const positionValid = (event) => {
   setFormData({ ...formData, position_id: event.target.value });
 };
 const emailValid = (event) => {
-  if (mailRegex.test(event.target.value)) {
-    setEmailReg(true);
     setFormData({ ...formData, email: event.target.value });
-  } else {
-    setEmailReg(false);
-  }
+  
 };
 const phoneNumberValid = (event) => {
-  if (numRegex.test(event.target.value)) {
-    setNumReg(true);
     setFormData({ ...formData, phone_number: event.target.value });
-  } else {
-    setNumReg(false);
-  }
+  
 };
 
   const nextStep = (event) => {

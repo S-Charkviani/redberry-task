@@ -3,13 +3,13 @@ import classes from "../Pages/FormPage.module.css";
 
 const Backend = "https://pcfy.redberryinternship.ge/api";
 
-const LaptopForm = ({
+const LaptopForm = (
   page,
   setPage,
   formData,
   setFormData,
   setShowSuccess,
-}) => {
+) => {
   const [brand, setBrand] = useState([]);
   const [cpu, setCpu] = useState([]);
   const [valid, setValid]=useState();
@@ -76,7 +76,8 @@ const LaptopForm = ({
     });
   };
 
-  
+  const allRegex = /[\w\[\]!@#$%^&*()_+=]/;
+  const NumRegex = /[0-9]{1}/;
   
 
   return (

@@ -85,10 +85,7 @@ useEffect(()=>{
 uploadHandler();
 }, [showSuccess])
 
-const submitHandler=(event)=>{
-  event.preventDefault();
-  setFormData("");
-}
+
 console.log(showSuccess)
   return (
 

@@ -27,15 +27,17 @@ const seeMore=(event)=>{
             return (
               <div key={data.laptop.id} className={classes.listRow}>
                 <div className={classes.listItem}>
+
                   <img
                     src={`https://pcfy.redberryinternship.ge${data.laptop.image} `}
                     alt="not found"
                   ></img>
+                  
                 <div className={classes.listTitle}>
-                  <h1>
+                  <p>
                     {data.user.name} {data.user.surname}
-                  </h1>
-                  <h1>{data.laptop.name}</h1>
+                  </p>
+                  <p>{data.laptop.name}</p>
                 
                 <button value={data.laptop.id} onClick={seeMore}>
                   მეტის ნახვა
