@@ -1,28 +1,34 @@
-import "./App.css";
-import { Redirect, Route, Switch } from "react-router-dom";
-import CoverPage from "./Components/CoverPage";
-import FormFrame from "./Components/FormFrame";
+import classes from "./App.css";
+import { Redirect, Route, Switch, useHistory } from "react-router-dom";
+import CoverPage from "./Pages/CoverPage";
+import FormPage from "./Pages/FormPage";
+import ListPage from "./Pages/ListPage";
+import LaptopInfoPage from "./Pages/LaptopInfoPage";
 
-
-function App() {
-  
-  return(
+function App(page, setPage) {
+  const history = useHistory();
+  return (
     <main>
       <Switch>
-          <Route path="/" exact>
-            <Redirect to='/welcome' />
-          </Route>
-      <Route path="/welcome">
-        <CoverPage/>
+        <Route path="/" exact>
+          <Redirect to="/welcome" />
         </Route>
-      <Route path="/form">
-          <FormFrame /> 
+        <Route path="/welcome">
+          <CoverPage />
+        </Route>
 
+        <Route path="/form">
+          <FormPage />
         </Route>
-        </Switch>
+        <Route path="/list" exact>
+          <ListPage />
+        </Route>
+        <Route path="/detail-info">
+          <LaptopInfoPage />
+        </Route>
+      </Switch>
     </main>
-  )
- 
+  );
 }
 
 export default App;

@@ -1,6 +1,7 @@
-main {
- 
-    width: 1920px;
-    background: #b33131;
-  }
-
+.main{
+  display: flex;
+  width: 1920px;
+  height:auto;
+  background-color: #c55d5d;
+  align-items: center;
+}

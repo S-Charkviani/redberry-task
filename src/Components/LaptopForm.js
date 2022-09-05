@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
-import classes from "./Form.module.css";
+import classes from "../Pages/FormPage.module.css";
 
 const Backend = "https://pcfy.redberryinternship.ge/api";
 
-const LaptopInfo = ({
+const LaptopForm = ({
   page,
   setPage,
   formData,
@@ -12,6 +12,7 @@ const LaptopInfo = ({
 }) => {
   const [brand, setBrand] = useState([]);
   const [cpu, setCpu] = useState([]);
+  const [valid, setValid]=useState();
 
   const fetchBrandHandler = useCallback(async () => {
     const response = await fetch(`${Backend}/brands`, {
@@ -75,6 +76,9 @@ const LaptopInfo = ({
     });
   };
 
+  
+  
+
   return (
     <div>
       <div className={classes.imageBox}>
@@ -103,17 +107,18 @@ const LaptopInfo = ({
           <select
             onChange={(e) =>
               setFormData({ ...formData, laptop_brand_id: e.target.value })
+              
             }
           >
-            <option disabled>ლეპტოპის ბრენდი</option>
+            <option selected disabled>ლეპტოპის ბრენდი</option>
             {brand.map((brandList) => {
-              return <option value={brandList.id}>{brandList.name}</option>;
+              return <option value={brandList.id} key={brandList.id}>{brandList.name}</option>;
             })}
           </select>
         </div>
       </div>
 
-      <div className={classes.line}></div>
+      <hr/>
 
       <div className={classes.generalInfo}>
         <div className={classes.selectTypeInfo}>
@@ -122,9 +127,9 @@ const LaptopInfo = ({
               setFormData({ ...formData, laptop_cpu: e.target.value })
             }
           >
-            <option disabled>CPU</option>
+            <option selected disabled>CPU</option>
             {cpu.map((cpuList) => {
-              return <option value={cpuList.id}>{cpuList.name}</option>;
+              return <option value={cpuList.name} key={cpuList.id}>{cpuList.name}</option>;
             })}
           </select>
         </div>
@@ -174,6 +179,7 @@ const LaptopInfo = ({
             <input
               type="radio"
               value="SSD"
+              name="memory"
               onChange={(e) =>
                 setFormData({
                   ...formData,
@@ -186,6 +192,7 @@ const LaptopInfo = ({
             <input
               type="radio"
               value="HDD"
+              name="memory"
               onChange={(e) =>
                 setFormData({
                   ...formData,
@@ -199,14 +206,13 @@ const LaptopInfo = ({
         </div>
       </div>
 
-      <div className={classes.line}></div>
+      <hr/>
 
       <div className={classes.generalInfo}>
         <div className={classes.inputTypeInfo}>
           <label>შეძენის რიცხვი(არჩევითი)</label>
           <input
             placeholder="დდ/თთ/წწწწ"
-            type="date"
             onChange={(e) =>
               setFormData({
                 ...formData,
@@ -241,16 +247,17 @@ const LaptopInfo = ({
           <input
             type="radio"
             value="new"
+            name="state"
             onChange={(e) =>
               setFormData({ ...formData, laptop_state: e.target.value })
             }
           />
           <label>ახალი</label>
-          <br></br>
 
           <input
             type="radio"
             value="used"
+            name="state"
             onChange={(e) =>
               setFormData({ ...formData, laptop_state: e.target.value })
             }
@@ -271,11 +278,11 @@ const LaptopInfo = ({
           </button>
         </div>
         <div className={classes.save}>
-          <button onClick={showSuccessHandler}>შენახვა</button>
+          <button onClick={showSuccessHandler} type='submit'>შენახვა</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default LaptopInfo;
+export default LaptopForm;
