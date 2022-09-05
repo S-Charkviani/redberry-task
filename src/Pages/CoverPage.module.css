@@ -28,6 +28,14 @@ font-weight: 500;
 font-size: 20px;
 line-height: 24px;
 }
+.buttons button:hover{
+  background-color:#317AD0;
+}
+
+.buttons button:active{
+  background-color:#1A5DAB;
+}
+
 
 .frame {
   position: absolute;
