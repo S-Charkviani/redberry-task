@@ -1,0 +1,61 @@
+.frame {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 1920px;
+  
+    background-color: #f6f6f6;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .content{
+    width: 60%;
+  }
+
+.segment{
+    display: flex;
+    position: row;
+    width:100%;
+    justify-content: flex-start;
+    flex:50%;
+gap: 10%;
+}
+
+.titleBox{
+    display: flex;
+   flex-direction: column;
+   width:100%;
+   gap:0px;
+}
+.titleBox p{
+    width: 50%;
+font-weight: 500;
+font-size: 22px;
+line-height: 27px;
+
+}
+
+.titleBox ol{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    align-items: center;
+    padding: 0% !important;
+}
+.titleBox ul{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+    align-items: center;
+    padding: 0% !important;
+}
+
+.coverTitle{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: flex-start;
+    gap: 40%;
+    margin-top: 1rem;
+  }
