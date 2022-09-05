@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import classes from "./FormPage.module.css";
-import LaptopInfo from "../Components/LaptopInfo";
-import Success from "../Components/success";
-import WorkerInfo from "../Components/WorkerInfo";
+import LaptopForm from "../Components/LaptopForm";
+
+import WorkerForm from "../Components/WorkerForm";
+import PopUp from "../Components/PopUp";
+
 
 const FormPage= (props) => {
   const [showSuccess, setShowSuccess] = useState(false);
   const history=useHistory();
 
   const [page, setPage] = useState(0);
+
+  
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -32,13 +36,13 @@ const FormPage= (props) => {
   });
 
   const formPages = [
-    <WorkerInfo
+    <WorkerForm
       formData={formData}
       setFormData={setFormData}
       page={page}
       setPage={setPage}
     />,
-    <LaptopInfo
+    <LaptopForm
       formData={formData}
       setFormData={setFormData}
       page={page}
@@ -67,9 +71,7 @@ const FormPage= (props) => {
   uploadData.append("token", "432db06872e4e66009d4636e383c03a7");
   uploadData.append("laptop_image", formData.laptop_image);
 
-  useEffect(()=>{
-
-
+  const uploadHandler=()=>{
   fetch("https://pcfy.redberryinternship.ge/api/laptop/create", {
     body: uploadData,
     headers: {
@@ -77,17 +79,22 @@ const FormPage= (props) => {
     },
     method: "POST",
   });
-}, [showSuccess]);
+};
+
+useEffect(()=>{
+uploadHandler();
+}, [showSuccess])
 
 const submitHandler=(event)=>{
   event.preventDefault();
   setFormData("");
 }
-
+console.log(showSuccess)
   return (
-    <div>
+
       <div className={classes.frame}>
-        {/* <div className={classes.arrowButton}>
+        <div className={classes.coverTitle}>
+        <div className={classes.arrowButton}>
           <button
             onClick={() => {
               if(page===1){
@@ -99,24 +106,23 @@ const submitHandler=(event)=>{
           >
             <div className={classes.arrow}></div>
           </button>
-        </div>
-         */}
+        </div> 
         <div className={classes.title}>
           <p> თანამშრომლის ინფო</p>
 
           <p>ლეპტოპის მახასიათებლები</p>
         </div>
-      
+        </div>
         <div className={classes.formCard}>
-        <form onSubmit={submitHandler} className={classes.form}>
+        <form  className={classes.form}>
          {formPages[page]}
          </form>
         </div>
         
-        {/* <div>{showSuccess && <Success />}</div> */}
+        <div>{showSuccess && <PopUp/>}</div>
         <div className={classes.logo}></div>
       </div>
-    </div>
+    
   );
 };
 
