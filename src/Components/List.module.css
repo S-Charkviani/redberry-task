@@ -1,0 +1,77 @@
+.frame{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 1920px;
+    
+    background-color: #F6F6F6;
+    gap:4rem;
+    align-items: center;
+  }
+
+.listRow{
+    width:80%;
+    height:205px;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: flex-start;
+    align-self: center;
+    
+    
+}
+
+.listItem{
+    width: 40%;
+height: 100%;
+display: flex;
+flex-direction: row;
+background: #EAFAFF;
+border: 1px solid #AED1EA;
+border-radius: 20px;
+gap: 2rem;
+justify-content: center;
+align-items: center;
+
+}
+
+.listItem img{
+    width: 266px;
+    height: 178px;
+}
+
+
+.listTitle {
+    position: flex;
+    flex-direction: column;
+}
+
+.coverTitle{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: flex-start;
+    gap: 40%;
+    margin-top: 1rem;
+  }
+
+.arrowButton button{
+    display: flex;
+    border-color: #D9D9D9;
+      width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background: #D9D9D9;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-left: 4rem;
+  }
+  
+  .arrow {
+    display: flex;
+    align-self: center;
+    width: 9.21px;
+    height: 16px;
+    background-image: url('../Images/Vector.png');
+  }
+  
