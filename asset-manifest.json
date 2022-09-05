@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/redberry-task/static/css/main.9dd6957f.css",
+    "main.js": "/redberry-task/static/js/main.d228d00c.js",
+    "static/media/Layer1.png": "/redberry-task/static/media/Layer1.07af64ea693e3b2288d1.png",
+    "static/media/phoneCover.png": "/redberry-task/static/media/phoneCover.c800126a9432b8f942ef.png",
+    "index.html": "/redberry-task/index.html",
+    "main.9dd6957f.css.map": "/redberry-task/static/css/main.9dd6957f.css.map",
+    "main.d228d00c.js.map": "/redberry-task/static/js/main.d228d00c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9dd6957f.css",
+    "static/js/main.d228d00c.js"
+  ]
+}
